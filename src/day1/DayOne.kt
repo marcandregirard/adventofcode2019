@@ -16,31 +16,14 @@ fun main(args: Array<String>) {
     print("Sums of fuel for all fuels of all modules : ")
     val sumsOfFuelModules = fuelsNeededForFuel.map { it }.sum()
     println(sumsOfFuelModules)
-
-    println("Sums of everything : " + (sumOfModules + sumsOfFuelModules))
-    val fuelsNeededForFuelCopy: ArrayList<Int> = ArrayList()
-    calculateFuelForModuleWithPrint(98541, fuelsNeededForFuelCopy)
 }
 
 private fun calculateFuelForModule(it: Int, fuelsNeededForFuel: ArrayList<Int>) {
-    var sums: Int = 0
+    var sums = 0
     var remainingFuel = it
     do {
         remainingFuel = DayOne().calculateFuelByMass(remainingFuel)
         sums += remainingFuel
-    } while (remainingFuel != 0)
-    fuelsNeededForFuel.add(sums)
-}
-
-private fun calculateFuelForModuleWithPrint(it: Int, fuelsNeededForFuel: ArrayList<Int>) {
-    var sums: Int = 0
-    var remainingFuel = it
-    println("Initial value of Fuel : " + it)
-    do {
-        remainingFuel = DayOne().calculateFuelByMass(remainingFuel)
-        sums += remainingFuel
-        println("Fuel for this iteration : " + remainingFuel)
-        println("Sums so far : " + sums)
     } while (remainingFuel != 0)
     fuelsNeededForFuel.add(sums)
 }
@@ -48,9 +31,6 @@ private fun calculateFuelForModuleWithPrint(it: Int, fuelsNeededForFuel: ArrayLi
 class DayOne {
     // divide by 3, round down, substract 2
     fun calculateFuelByMass(mass: Int): Int {
-        if ( mass <= 0 ) {
-            return 0;
-        }
         val roundedDownValue = mass / 3
         val substractedValue = roundedDownValue - 2
         if(substractedValue <= 0) {
