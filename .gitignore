@@ -1,2 +1,14 @@
 # Project exclude paths
 /out/
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/codeStyles/Project.xml
+/.idea/libraries/KotlinJavaRuntime.xml
+/.idea/sonarlint/issuestore/9/d/9db01c669658a9e6d5bc35f9e4347b9848454077
+/.idea/sonarlint/issuestore/d/a/da878235546cead5b4f5caa53d89929cae97edb9
+/.idea/sonarlint/issuestore/index.pb
+/.idea/.gitignore
+/.idea/kotlinc.xml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/adventofcode.iml
